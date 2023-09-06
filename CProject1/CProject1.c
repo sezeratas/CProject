@@ -15,21 +15,22 @@ int main()
     printf("Input 2 number:\n");
     scanf_s("%d %d", &num1, &num2);
 
-    if (select==1)
+    switch (select)
     {
-        printf("----  Result = %d  -----\n",num1+num2);
-    }
-    else if (select == 2)
-    {
-        printf("----  Result = %d  -----\n", num1 - num2);
-    }
-    else if (select == 3)
-    {
-        printf("----  Result = %d  -----\n", num1 * num2);
-    }
-    else if (select == 4)
-    {
-        printf("----  Result = %f  -----\n", (float) num1 / num2);
+    case 1:
+        printf("Result is %d", num1 + num2);
+        break;
+    case 2:
+        printf("Result is %d", num1 - num2);
+        break;
+    case 3:
+        printf("Result is %d", num1 * num2);
+        break;
+    case 4:
+        printf("Result is %d", num1 / num2);
+        break;
+    default:
+        break;
     }
     
     return 0;
